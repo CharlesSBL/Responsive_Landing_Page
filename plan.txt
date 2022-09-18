@@ -1,0 +1,2 @@
+npm install => sciaga node_moduels
+npx webpack serve => wywoluje webpack serwer

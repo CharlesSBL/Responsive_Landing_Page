@@ -1,0 +1,7 @@
+
+
+
+dodanie bibliotek
+
+    1. https://cdnjs.com/libraries/font-awesome  => font-awesome
+    2. 
