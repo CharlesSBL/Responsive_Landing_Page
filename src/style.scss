@@ -66,6 +66,20 @@ li {
   list-style: none;
 }
 
+// ==============* Scroll Bar *============== \\
+::-webkit-scrollbar{
+  width: 10px;
+  background: var(--scroll-bar-color);
+  border-radius: 2em;
+}
+::-webkit-scrollbar-thumb{
+  background: var(--scroll-thumb-color);
+  border-radius: 2em;
+  &:hover{
+    background: var(--scroll-thumb-hover-color);
+  }
+}
+
 // ==============* Header *============== \\
 header {
   z-index: 99999;
@@ -93,20 +107,37 @@ header {
       font-size: 1.3em;
       font-weight: 600;
     }
+    
   }
 
   .nav-items a {
     color: var(--first-color);
     font-size: var(--normal-font-size);
     font-weight: 500;
+<<<<<<< HEAD
+    
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+    
+=======
 
     &:not(:last-child) {
       margin-right: 50px;
     }
 
+>>>>>>> origin/main
     &:hover {
       color: var(--second-color);
     }
+  }
+  
+}
+.sticky{
+  background: rgba(255,255,255,0.1);
+  box-shadow: var(--box-shadow);
+  .nav-bar{
+    height: calc(2.5rem + 1rem);
   }
 }
 
@@ -247,7 +278,11 @@ header {
 .section-title-01 {
   font-size: 4.5em;
   font-weight: 800;
+<<<<<<< HEAD
+  margin-bottom: -1rem;
+=======
   margin-bottom: -2rem;
+>>>>>>> origin/main
   background: linear-gradient(to top, transparent 0%, var(--first-color) 70%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -257,7 +292,11 @@ header {
 .section-title-02 {
   font-size: 2.5em;
   font-weight: 700;
+<<<<<<< HEAD
+  transform: translateY(-50px);
+=======
   transform: translateY(-30px);
+>>>>>>> origin/main
 
   &::before {
     content: "";
