@@ -488,3 +488,154 @@ header {
     }
   }
 }
+
+.experience-card {
+  background: var(--card-bg-color);
+  border-bottom: 3px solid var(--second-color);
+  padding: 35px;
+  border-radius: 6px;
+  box-shadow: var(--box-shadow);
+  transition: 0.3s ease;
+  .upper {
+    line-height: 30px;
+  }
+  h3 {
+    font-size: 1.3em;
+    font-weight: 700;
+  }
+  h5 {
+    font-size: var(--small-font-size);
+    font-weight: 500;
+    font-style: italic;
+  }
+  span {
+    color: var(--third-color);
+  }
+  .hr {
+    width: 100%;
+    height: 2px;
+    background: var(--line-color);
+    margin: 10px 0 22px;
+  }
+}
+
+.edu-list .item:hover,
+.bar:hover,
+.experience-card:hover {
+  transform: scale(1.03);
+}
+
+// ==============* Services section *============== \\
+
+.services {
+  .container {
+    .content {
+      width: 100%;
+    }
+  }
+}
+
+.services-description {
+  h3 {
+    font-size: 2em;
+    margin-bottom: 50px;
+  }
+}
+
+.service-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+  max-width: 100%;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.service-card {
+  background: var(--card-bg-color);
+  border-bottom: 3px solid var(--second-color);
+  padding: 50px;
+  border-radius: 6px;
+  box-shadow: var(--box-shadow);
+  > i {
+    color: var(--second-color);
+    font-size: 3em;
+    margin-bottom: 30px;
+  }
+  h3 {
+    font-size: 1.5em;
+    font-weight: 700;
+    line-height: 30px;
+    margin-bottom: 20px;
+  }
+  .learn-more-btn {
+    color: var(--third-color);
+    cursor: pointer;
+    transition: 0.3s ease;
+    i {
+      transition: 0.3s ease;
+    }
+  }
+  &:hover {
+    .learn-more-btn {
+      i {
+        transform: translateX(10px);
+      }
+    }
+  }
+}
+.service-modal {
+  z-index: 999999;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: var(--bg-transparent-color);
+  backdrop-filter: blur(10px);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.service-modal-body {
+  position: relative;
+  background-color: var(--modal-bg-color);
+  max-width: 600px;
+  margin: 20px;
+  padding: 40px;
+  border-radius: 10px;
+  box-sizing: var(--box-shadow);
+  transform: translateY(-50px);
+  transition: 0.5s ease;
+  .modal-close-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 20px;
+    cursor: pointer;
+  }
+  h3 {
+    font-size: 2em;
+  }
+  h4 {
+    font-size: 1.3em;
+    font-weight: 600;
+    margin: 15px 0 10px;
+  }
+  ul {
+    li {
+      margin-top: 15px;
+      i {
+        color: var(--second-color);
+      }
+    }
+  }
+}
+
+.service-modal.active {
+  visibility: visible;
+  opacity: 1;
+  .service-modal-body {
+    transform: translateY(0);
+  }
+}
