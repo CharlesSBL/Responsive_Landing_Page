@@ -3,5 +3,6 @@
 
 dodanie bibliotek
 
-    1. https://cdnjs.com/libraries/font-awesome  => font-awesome
-    2. 
+    1. https://cdnjs.com/libraries/font-awesome  => font-awesome  => Icons
+    2. https://swiperjs.com/                     => Swiper        => Touch Slider
+    3. https://studio.swiperjs.com/              => Swiper studio => No-code Swiper builder 

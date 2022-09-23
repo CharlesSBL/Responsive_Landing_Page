@@ -1,5 +1,5 @@
 // external files
-@use "./scss/body.scss";
+@use "./scss/swiper-bundle.min.css";
 
 // fonts
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
@@ -830,16 +830,17 @@ header {
   }
 }
 
-
 // ==============* Get-In Touch *============== \\
-.get-in-touch{
+.get-in-touch {
   margin-top: 70px;
-  .container{
-    .content{
+
+  .container {
+    .content {
       width: 100%;
     }
   }
-  .contact-card{
+
+  .contact-card {
     position: relative;
     width: 90%;
     background: var(--card-bg-color);
@@ -847,26 +848,107 @@ header {
     padding: 50px;
     border-radius: 10px;
     column-gap: 50px;
-    .title{
+
+    .title {
       text-transform: uppercase;
       line-height: 60px;
-      h4{
+
+      h4 {
         font-size: 1.2em;
         font-weight: 300;
         line-height: 20px;
       }
-      h3{
+
+      h3 {
         font-size: 2.3em;
         font-weight: 400;
       }
-      h2{
+
+      h2 {
         font-size: 4.2em;
         font-weight: 700;
-        background: linear-gradient(to top, transparent 0%, var(--first-color) 30%);
+        background: linear-gradient(
+          to top,
+          transparent 0%,
+          var(--first-color) 30%
+        );
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        opacity: .9;
+        opacity: 0.9;
       }
     }
   }
+}
+
+// ==============* Our Clients *============== \\
+
+.our-client {
+  .container {
+    flex-direction: column;
+
+    .content {
+      width: 100%;
+
+      .client-swiper {
+        .swiper-wrapper {
+          margin-bottom: 30px;
+
+          .swiper-slide {
+            gap: 50px;
+            margin: 20px 0;
+
+            .client-img {
+              width: 250px;
+              overflow: hidden;
+              height: 250px;
+              border-radius: 10px;
+
+              img {
+                width: 100%;
+                height: 120%;
+                object-fit: cover;
+              }
+            }
+
+            .client-details {
+              max-width: 500px;
+
+              p {
+                font-size: 1.2em;
+                color: var(--third-color);
+                padding-bottom: 15px;
+                margin-bottom: 10px;
+                border-bottom: 2px solid var(--line-color);
+              }
+
+              h3 {
+                color: var(--first-color);
+                font-size: 1.5em;
+              }
+
+              span {
+                color: var(--third-color);
+                font-size: 1.1em;
+              }
+            }
+          }
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+          color: var(--second-color);
+          font-size: 3em;
+
+          &::after {
+            content: "";
+          }
+        }
+      }
+    }
+  }
+}
+
+.swiper-pagination-bullet,
+.swiper-pagination-bullet-active {
+  background-color: var(--second-color);
 }
