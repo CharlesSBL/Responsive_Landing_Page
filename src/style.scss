@@ -952,3 +952,106 @@ header {
 .swiper-pagination-bullet-active {
   background-color: var(--second-color);
 }
+
+// ==============* Contact-Me *============== \\
+
+.contact {
+  .container {
+    .content {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+      .contact-left {
+        h2 {
+          font-size: 1.2em;
+          font-weight: 800;
+          margin-bottom: 40px;
+        }
+
+        .contact-list {
+          li {
+            margin-bottom: 40px;
+
+            h3 {
+              font-size: 1.3em;
+              font-weight: 600;
+              margin-bottom: 10px;
+
+              i {
+                color: var(--second-color);
+                font-size: 1.3em;
+                margin-right: 10px;
+              }
+            }
+
+            span {
+              color: var(--third-color);
+              margin-left: 40px;
+
+              a {
+                color: var(--third-color);
+              }
+            }
+          }
+        }
+      }
+
+      .contact-right {
+        p {
+          color: var(--third-color);
+          font-size: 1.6em;
+          margin-bottom: 30px;
+
+          span {
+            color: var(--first-color);
+            font-weight: 700;
+          }
+        }
+
+        .contact-form {
+          input,
+          textarea {
+            border: none;
+            color: var(--first-color);
+            background-color: var(--transparent-color-02);
+            font-size: var(--normal-font-size);
+            margin-bottom: 20px;
+            padding: 15px 40px 40px 20px;
+            border-radius: 5px;
+          }
+
+          textarea {
+            width: 100%;
+            resize: none;
+          }
+
+          .first-row {
+            input {
+              width: 100%;
+            }
+          }
+
+          .second-row {
+            display: flex;
+            justify-content: space-between;
+
+            input {
+              width: 48%;
+            }
+          }
+          .btn{
+            border: none;
+            margin-top: 0;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+::placeholder {
+  color: var(--first-color);
+}
