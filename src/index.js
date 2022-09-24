@@ -6,21 +6,11 @@ import _ from 'lodash';
 // SCSS 
 import "./style.scss";
 
-
-
-
-
-
 // ============ Navigation bar effects on scroll ============ \\
 window.addEventListener("scroll", (() => {
     const header = document.querySelector("header");
     header.classList.toggle("sticky", window.scrollY > 0);
 }));
-
-
-
-
-
 
 // ============ Services section - Modal ============ \\ 
 const serviceModals = document.querySelectorAll(".service-modal");
@@ -45,12 +35,6 @@ modalCloseBtns.forEach((modalCloseBtn) => {
     });
 });
 
-
-
-
-
-
-
 // ============ Portfolio Section - Modal ============ \\ 
 const portfolioModals = document.querySelectorAll(".portfolio-model");
 const imgCards = document.querySelectorAll(".img-card");
@@ -74,11 +58,6 @@ portfolioCloseBtns.forEach((portfolioCloseBtn) => {
     });
 });
 
-
-
-
-
-
 // ============ Our-clients > Initialize Swiper ============ \\ 
 var swiper = new Swiper(".client-swiper", {
     slidesPerView: 1,
@@ -101,11 +80,29 @@ var swiper = new Swiper(".client-swiper", {
 // ============ Scroll to top Button ============ \\ 
 const scrollTopBtn = document.querySelector(".scrollToTop-btn");
 
-window.addEventListener("scroll", function(){
+window.addEventListener("scroll", function () {
     scrollTopBtn.classList.toggle("active", window.scrollY > 500);
 });
 
 scrollTopBtn.addEventListener("click", () => {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
+});
+
+// ============ Navigation menu items active on page scroll ============ \\ 
+window.addEventListener("scroll", () => {
+    const section = document.querySelectorAll("section");
+    const scrollY = window.pageYOffset;
+
+    section.forEach(current => {
+        let sectionHeight = current.offsetHeight;
+        let sectionTop = current.offsetTop - 50;
+        let id = current.getAttribute("id");
+
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            document.querySelector(".nav-items a[href*=" + id + "]").classList.add("active");
+        } else {
+            document.querySelector(".nav-items a[href*=" + id + "]").classList.remove("active");
+        };
+    });
 });

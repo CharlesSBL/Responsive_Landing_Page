@@ -147,7 +147,9 @@ header {
     }
   }
 }
-
+.nav-items a.active{
+  color: var(--second-color);
+}
 .sticky {
   background: rgba(255, 255, 255, 0.1);
   box-shadow: var(--box-shadow);
