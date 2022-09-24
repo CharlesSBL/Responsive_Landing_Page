@@ -40,6 +40,30 @@
   --scroll-thumb-hover-color: #454f6b;
 }
 
+// ==============* Theme Dark/Light *============== \\
+.dark-theme {
+  // ======== Main Theme Colors ========
+  --first-color: #fff;
+  --second-color: #6a59d1;
+  --third-color: #a9afc3;
+
+  // ======== Background Colors ========
+  --body-bg-color: #0e1b31;
+  --card-bg-color: #132347;
+  --modal-bg-color: #102048;
+  --bg-transparent-color: rgba(225, 225, 225, 0.1);
+  --transparent-color-01: rgba(225, 225, 225, 0.1);
+  --line-color: #454f6b;
+
+  // ======== Color Filter ========
+  --color-filter: invert(0);
+
+  // ======== Scroll Bar Colors  ========
+  --scroll-bar-color: #c1ceff;
+  --scroll-thumb-color: #282f4e;
+  --scroll-thumb-hover-color: #454f6b;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -67,7 +91,7 @@ li {
 }
 
 // ==============* Scroll to top Button *============== \\
-.scrollToTop-btn{
+.scrollToTop-btn {
   z-index: 999999;
   position: fixed;
   right: 0;
@@ -80,12 +104,34 @@ li {
   border-radius: 3px;
   cursor: pointer;
   opacity: 0;
-  transition: .5s ease;
+  transition: 0.5s ease;
 }
-.scrollToTop-btn.active{
+.scrollToTop-btn.active {
   right: 20px;
   pointer-events: all;
   opacity: 1;
+}
+// ==============* Light/Dark Theme Button *============== \\
+.theme-btn {
+  z-index: 999999;
+  position: fixed;
+  right: 0;
+  top: 100px;
+  background-color: var(--transparent-color-01);
+  backdrop-filter: blur(20px);
+  width: 50px;
+  height: 50px;
+  font-size: 1.2em;
+  border-radius: 5px 0 0 5px;
+  box-shadow: var(--box-shadow);
+  cursor: pointer;
+}
+.theme-btn .fa-sun,
+.theme-btn.sun .fa-moon {
+  display: none;
+}
+.theme-btn.sun .fa-sun {
+  display: block;
 }
 
 // ==============* Scroll Bar *============== \\
@@ -147,7 +193,7 @@ header {
     }
   }
 }
-.nav-items a.active{
+.nav-items a.active {
   color: var(--second-color);
 }
 .sticky {
