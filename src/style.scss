@@ -1285,6 +1285,12 @@ footer {
   // ==============* Home Section *============== \\
   .home {
     .home-container {
+      .home-img {
+        // visibility: hidden;
+        // opacity: 1;
+        // width: 50%;
+        // height: 50%;
+      }
       .info {
         font-size: 0.85rem;
       }
@@ -1292,22 +1298,22 @@ footer {
   }
 
   // ==============* About Section *============== \\
-  .about{
-    .container{
-      .content{
+  .about {
+    .container {
+      .content {
         display: grid;
         width: 100%;
         row-gap: 20px;
-        .about-img{
+        .about-img {
           min-width: 0;
           width: 100%;
         }
-        .about-info{
+        .about-info {
           min-width: 0;
           width: 100%;
-          .professional-list{
+          .professional-list {
             flex-direction: column;
-            .list-item{
+            .list-item {
               justify-content: start;
             }
           }
@@ -1317,14 +1323,85 @@ footer {
   }
 
   // ==============* Get-in Touch *============== \\
-  .get-in-touch{
-    .contact-card{
+  .get-in-touch {
+    .contact-card {
       display: grid;
       width: 100%;
-      .title{
+      .title {
         font-size: 0.8rem;
         line-height: 50px;
       }
     }
   }
+
+  // ==============* Our Clients *============== \\
+  .client-swiper {
+    .swiper-slide {
+      flex-direction: column;
+      .client-details {
+        text-align: center;
+      }
+    }
+  }
+
+  // ==============* Contact Section *============== \\
+  .contact {
+    .content {
+      flex-direction: column;
+      font-size: 0.9rem;
+    }
+    .contact-left {
+      margin-bottom: 40px;
+    }
+  }
+  .contact-form {
+    .second-row {
+      flex-direction: column;
+      input {
+        width: 100%;
+      }
+    }
+  }
+
+  // ==============* Footer *============== \\
+  footer {
+    .footer-container {
+      flex-direction: column;
+      .about,
+      .info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 50px;
+      }
+      .info {
+        ul {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          li {
+            display: flex;
+            flex-direction: column;
+            // align-items: center;
+            padding: 0;
+            margin: 0;
+            // text-align: center;
+          }
+        }
+      }
+      .hr {
+        width: 100%;
+        height: 2px;
+        background-color: rgba(225, 225, 225, 0.1);
+        margin: 10px 0 22px;
+      }
+    }
+  }
+}
+
+// ==============* Media query max-width 730px *============== \\
+@media screen and (max-width: 730px){
+  
 }
