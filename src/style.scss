@@ -1402,6 +1402,54 @@ footer {
 }
 
 // ==============* Media query max-width 730px *============== \\
-@media screen and (max-width: 730px){
-  
+@media screen and (max-width: 730px) {
+  // ==============* Common Styles For All Sections *============== \\
+  body {
+    margin: 5rem 0 0 0;
+  }
+
+  .section-title-01 {
+    font-size: 3em;
+  }
+
+  .section-title-02 {
+    font-size: 2em;
+    transform: translateY(-65px);
+  }
+
+  // ==============* Home Sections *============== \\
+  .home {
+    .home-container {
+      display: grid;
+      .home-img {
+        // position: absolute;
+        width: 0px;
+        img {
+          // width: 65%;
+          // transform: translate(80px, -180px);
+        }
+      }
+      .info {
+        font-size: 0.8rem;
+      }
+    }
+  }
+  .media-icons {
+    margin-bottom: 80px;
+  }
+  // ==============* Get-In Touch Sections *============== \\
+  .get-in-touch {
+    .contact-card {
+      display: grid;
+      .title {
+        font-size: 0.6rem;
+        line-height: 40px;
+      }
+      .contact-btn {
+        .btn {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
 }
