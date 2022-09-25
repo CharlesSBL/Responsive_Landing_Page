@@ -5,6 +5,7 @@
 import _ from 'lodash';
 // SCSS 
 import "./style.scss";
+import ScrollReveal from 'scrollreveal';
 
 // ============ Navigation bar effects on scroll ============ \\
 window.addEventListener("scroll", (() => {
@@ -127,9 +128,9 @@ window.addEventListener("scroll", () => {
 });
 
 // ============ Responsive Navigation Menu Toggle ============ \\
-const menuBtn = document.querySelector(".nav-menu-btn"); 
-const closeBtn = document.querySelector(".nav-close-btn"); 
-const navigation = document.querySelector(".navigation"); 
+const menuBtn = document.querySelector(".nav-menu-btn");
+const closeBtn = document.querySelector(".nav-close-btn");
+const navigation = document.querySelector(".navigation");
 const navItem = document.querySelector(".nav-items a");
 
 menuBtn.addEventListener("click", () => {
@@ -145,3 +146,17 @@ navItems.forEach((navItem) => {
         navigation.classList.remove("active");
     });
 });
+
+// ============ Scroll Reveal Animation ============ \\
+
+
+// ============ Common Reveal Options To Create Reveal Animation ============ \\
+    // ScrollReveal({
+        // reset: true,
+        // distance: '60px',
+        // duration: 2500,
+        // delay: 100
+    // });
+// ============ Target Elements, And Specify Options To Create Reveal Animation ============ \\
+
+    // ScrollReveal().reveal('.home .home-container .info h2', { delay: 500, origin: 'left'});

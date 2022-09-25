@@ -21,7 +21,8 @@
     "webpack-dev-server": "^4.11.0"
   },
   "dependencies": {
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "scrollreveal": "^4.0.9"
   },
   "main": "webpack.config.js",
   "description": ""
